@@ -1,0 +1,67 @@
+
+Resource Objects
+
+- Tile
+     * Replace sprite hack with more optimal system
+
+- Sprite
+     * Sprite Precache (High Priority, Easy)
+
+- Texture
+     * Auto Stipple Alpha Generation (Novelty)
+     * Load Alpha channel separate to image
+
+- Lines
+     * Make the line shape primitive number modifiable
+     
+- Text
+     * Built in console font
+     * New TTF Text Primitive
+     
+- Sound
+     * Delay load until required or precached
+     * Panning
+     * Volume
+
+- Music
+     * Delay load until required or precached
+     * Panning
+     * Volume
+     * Tempo
+
+Systems
+   - Input
+      * Key Hit    (High Priority)
+      * Key Up     (High Priority)
+      * Key Repeat - Set Delay etc.
+      * Fix Mouse Hover Event
+
+   - Renderer
+      * Multiple cameras / scrolling solution (High Priority)
+      * Material based rendering engine (Large Effort)
+      * Scene graph (Large Effort)
+      
+    - Sound
+      * Mute all
+      * Master volume
+
+Attribute Classes
+   - Colour
+      * Utilities to convert RGBA to red green and blue and vice verca
+
+Documentation
+   - CHTML documentation 
+   - Make all header file comments use consistant format
+
+Project
+   - App Wizard (Greg Started)
+
+Optimisation
+   - general performance analysis and optimisation (Greg Started having problems with Rational Quantify under VC++ .NET)
+   - application activation/deactivation detection and response
+      * minimise resource useage while minimised
+      * pause game
+
+Error Handling
+   - Switch to exception based system
+   

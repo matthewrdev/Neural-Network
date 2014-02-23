@@ -1,0 +1,33 @@
+#ifndef NAME
+#define NAME
+
+//****************************************************************************
+//**
+//**    NAME
+//**
+//**    Copyright (c) 2010 Matthew Robbins
+//**
+//**    Author:  Matthew Robbins
+//**    Created: 04/2010
+//**
+//****************************************************************************
+
+// Forward Declarations
+namespace ...
+{
+	class ...
+};
+
+namespace CarDemo 
+{
+
+	class NAME
+	{
+	private:
+	protected:
+	public:
+	};
+	
+}; // End namespace CarDemo.
+
+#endif // #ifndef NAME

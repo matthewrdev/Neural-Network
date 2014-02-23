@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{702758a0-1297-4815-b556-a8142c2bdab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Clarity Math">
+      <UniqueIdentifier>{01c70173-e765-445d-9ae8-405574815da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e7ad486-da23-4f7c-89ca-b7965fa80581}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b5ef2b1d-2569-46c2-b691-9e303c182fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Clarity Math">
+      <UniqueIdentifier>{3f337e39-be31-483c-b6bd-7b36abbfb0d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Agent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EditorInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EntityManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameGlobals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GeneticAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Genome.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MemoryLeak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NeuralNet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NLayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TrackPolygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\AABox.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\AARect.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Area.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Circle.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Direction.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\EulerAngle.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Line2.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Line3.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\LineSegment2.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\LineSegment3.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Math.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Matrix2.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Matrix3.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Matrix4.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Mirror.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Quaternion.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Random.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Ray2.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Sphere.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Vector2.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Vector3.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Clarity\Math\Vector4.h">
+      <Filter>Header Files\Clarity Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\Resources.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="include\Template.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EditorInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EntityManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameGlobals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GeneticAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NeuralNet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrackPolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AABox.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AARect.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Area.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Circle.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Direction.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Line2.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Line3.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LineSegment2.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LineSegment3.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Math.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Matrix2.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Matrix3.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Matrix4.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mirror.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quaternion.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Random.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ray2.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sphere.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector2.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector3.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector4.cpp">
+      <Filter>Source Files\Clarity Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp" />
+  </ItemGroup>
+</Project>

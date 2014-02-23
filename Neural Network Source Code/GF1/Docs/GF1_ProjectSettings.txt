@@ -1,0 +1,49 @@
+//****************************************************************************
+//**
+//**    GF1_ProjectSettings.txt
+//**    Describes the way this library project is set up and what settings
+//**	clients need to use and be aware of when using this library.  It also
+//**	covers special installation requirements of the library.
+//**
+//**    Copyright (c) 2003 QANTM CMC Australia
+//**
+//**    Author:  Dale Freya
+//**    Created: 21/09/2003
+//**
+//****************************************************************************
+
+1.	The build configurations of this library are:
+		Debug
+		Based On Default:	Debug
+		Runtime Library:	Multi-threaded Debug DLL
+		Target Name:		bin\GF1_d.dll
+		Library Name:		lib\GF1_d.lib
+		
+		Release
+		Based On Default:	Release
+		Runtime Library:	Multi-threaded Debug DLL
+		Target Name:		bin\GF1.dll
+		Library Name:		lib\GF1.lib
+
+2.	At run time these the dlls of this library depend on the Visual C++ run 
+time dlls.  These dlls don't necessarily exist on client systems so they must
+be included in the client installer as redistributables.  This is done by 
+including the appropriate merge module in the installer.  These merge modules 
+can usually be found in the "Program Files\Common Files\Merge Modules\" 
+folder.
+
+VC++ .NET:
+	DLL				MERGE MODULE		DESCRIPTION
+	msvcr70.dll		VC_CRT.msm			C++ Runtime
+	msvci70.dll		VC_CRT_IO.msm		C++ IO Runtime
+	mscvp70.dll		VC_STL.msm			C++ STL
+	
+	
+3.	GF1_EXPORTS is not to be defined in clients using this library.
+
+
+//****************************************************************************
+//**
+//**    END Document
+//**
+//****************************************************************************

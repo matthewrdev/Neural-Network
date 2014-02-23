@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{44605FD6-10EF-44FE-80E0-9F557A01D0E5}</ProjectGuid>
+    <RootNamespace>breakout</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include;..\GF1\include; TinyXML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>../GF1/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>include;..\GF1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>GF1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../GF1/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Agent.h" />
+    <ClInclude Include="include\EditorInterface.h" />
+    <ClInclude Include="include\EntityManager.h" />
+    <ClInclude Include="include\GameGlobals.h" />
+    <ClInclude Include="include\GameInterface.h" />
+    <ClInclude Include="include\GameSettings.h" />
+    <ClInclude Include="include\GameTimer.h" />
+    <ClInclude Include="include\GeneticAlgorithm.h" />
+    <ClInclude Include="include\Genome.h" />
+    <ClInclude Include="include\MemoryLeak.h" />
+    <ClInclude Include="include\NeuralNet.h" />
+    <ClInclude Include="include\NLayer.h" />
+    <ClInclude Include="include\TrackPolygon.h" />
+    <ClInclude Include="include\Clarity\Math\AABox.h" />
+    <ClInclude Include="include\Clarity\Math\AARect.h" />
+    <ClInclude Include="include\Clarity\Math\Area.h" />
+    <ClInclude Include="include\Clarity\Math\Circle.h" />
+    <ClInclude Include="include\Clarity\Math\Direction.h" />
+    <ClInclude Include="include\Clarity\Math\EulerAngle.h" />
+    <ClInclude Include="include\Clarity\Math\Line2.h" />
+    <ClInclude Include="include\Clarity\Math\Line3.h" />
+    <ClInclude Include="include\Clarity\Math\LineSegment2.h" />
+    <ClInclude Include="include\Clarity\Math\LineSegment3.h" />
+    <ClInclude Include="include\Clarity\Math\Math.h" />
+    <ClInclude Include="include\Clarity\Math\Matrix2.h" />
+    <ClInclude Include="include\Clarity\Math\Matrix3.h" />
+    <ClInclude Include="include\Clarity\Math\Matrix4.h" />
+    <ClInclude Include="include\Clarity\Math\Mirror.h" />
+    <ClInclude Include="include\Clarity\Math\Quaternion.h" />
+    <ClInclude Include="include\Clarity\Math\Random.h" />
+    <ClInclude Include="include\Clarity\Math\Ray2.h" />
+    <ClInclude Include="include\Clarity\Math\Sphere.h" />
+    <ClInclude Include="include\Clarity\Math\Vector2.h" />
+    <ClInclude Include="include\Clarity\Math\Vector3.h" />
+    <ClInclude Include="include\Clarity\Math\Vector4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\Resources.txt" />
+    <None Include="include\Template.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Agent.cpp" />
+    <ClCompile Include="src\EditorInterface.cpp" />
+    <ClCompile Include="src\EntityManager.cpp" />
+    <ClCompile Include="src\GameGlobals.cpp" />
+    <ClCompile Include="src\GameInterface.cpp" />
+    <ClCompile Include="src\GameSettings.cpp" />
+    <ClCompile Include="src\GameTimer.cpp" />
+    <ClCompile Include="src\GeneticAlgorithm.cpp" />
+    <ClCompile Include="src\NeuralNet.cpp" />
+    <ClCompile Include="src\NLayer.cpp" />
+    <ClCompile Include="src\TrackPolygon.cpp" />
+    <ClCompile Include="src\AABox.cpp" />
+    <ClCompile Include="src\AARect.cpp" />
+    <ClCompile Include="src\Area.cpp" />
+    <ClCompile Include="src\Circle.cpp" />
+    <ClCompile Include="src\Direction.cpp" />
+    <ClCompile Include="src\Line2.cpp" />
+    <ClCompile Include="src\Line3.cpp" />
+    <ClCompile Include="src\LineSegment2.cpp" />
+    <ClCompile Include="src\LineSegment3.cpp" />
+    <ClCompile Include="src\Math.cpp" />
+    <ClCompile Include="src\Matrix2.cpp" />
+    <ClCompile Include="src\Matrix3.cpp" />
+    <ClCompile Include="src\Matrix4.cpp" />
+    <ClCompile Include="src\Mirror.cpp" />
+    <ClCompile Include="src\Quaternion.cpp" />
+    <ClCompile Include="src\Random.cpp" />
+    <ClCompile Include="src\Ray2.cpp" />
+    <ClCompile Include="src\Sphere.cpp" />
+    <ClCompile Include="src\Vector2.cpp" />
+    <ClCompile Include="src\Vector3.cpp" />
+    <ClCompile Include="src\Vector4.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GF1\GF1.vcxproj">
+      <Project>{bb7347f5-95e5-4498-84d1-578f4a14fff3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

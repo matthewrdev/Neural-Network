@@ -1,0 +1,31 @@
+//****************************************************************************
+//**
+//**    Resources.txt
+//**
+//**    Copyright (c) 2010 Matthew Robbins
+//**
+//**    Author:  Matthew Robbins
+//**    Created: 03/2010
+//**
+//****************************************************************************
+
+
+-------------------------------------------------------------------------
+------------------------------ Resources.  ------------------------------
+
+Grass texture from:
+http://mirror2.cze.cz/texturesLarge/grass-texture-2.jpg
+
+
+
+-------------------------------------------------------------------------
+------------------------------ References. ------------------------------
+
+These are the references that I used when making the AI demo.
+
+For the AI sections of the demo, mostly for research on neural nets:
+  - AI Game Engine Programming.
+    Author(s): Brian Schwab.
+  - AI Techniques for Game Programming.
+    Author(s): Mat Buckland.
+    

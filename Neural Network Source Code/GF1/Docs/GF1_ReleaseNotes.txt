@@ -1,0 +1,202 @@
+BIE Game Framework 1
+Release Notes
+
+===========
+Version 1.8
+===========
+Enhancement release.
+28/02/2006
+
+Enhancements
+------------
+Wesley Clarke
+1. Add dialog MessageBox that asks the player if they wish to operate in fullscreen or windowed mode.  Picks the appropriate Window style based on selection and sets the application into fullscreen or windowed mode.  
+2. Altered the default debug mode window style to WS_OVERLAPPEDWINDOW - provides a titlebar so the window can easily be moved around.
+3. Added the CDS_FULLSCREEN flag to the ChangeDisplaySettings call.  Appears to stop windows from being randomly resized when quitting out of fullscreen.  We can only hope.
+
+
+===========
+Version 1.7
+===========
+Enhancement and bug fix release.
+08/12/2003
+
+Enhancements
+------------
+Dale Freya
+1. Added Revert Method to the Sprite class.  Used to revert to the on disk image when doing texture manipulation.
+2. Added key event polling functions.  These functions will return true only for the logic in which the key down or key up event takes place.  Should make doing menus and buttons a little easier.
+      BIE_GF1_API bool IsKeyHit(int key);
+      BIE_GF1_API bool IsKeyLifted(int key);
+3. Added Sprite Filtering Options.  You can now set a sprite's minification or magnification filter to linear (rather than the default nearest) if you want the sprite to look better scaled.  Be aware that some bleeding may occur between frames if you have a multi frame sprite image using linear filtering.
+   Filter Sprite::GetMinificationFilter() const;
+   Filter Sprite::GetMagnificationFilter() const;
+   void Sprite::SetFilter(Filter minFilter, Filter magFilter);
+
+Bugs Fixed
+----------
+Dale Freya
+1. Fixed array overwrite if using texture manipulation with a non-power of 2 (auto padded) texture.  Thanks to Aaron Benton for finding this Bug.
+2. Texture manager now shares textures based on case insensitive comparison of image file names rather than on image pointers.  Greg Quincey pointed this bug out.  Should probably share based on absolute file names as ./filename and filename will still be different.
+
+
+===========
+Version 1.6
+===========
+Enhancement and bug fix release.
+28/11/2003
+
+Enhancements
+-----------
+Dale Freya
+1. Added default cursor manipulation to the Input module. (BIE_GF1_Input.h)
+         DefaultCursorIsEnabled()
+         DefaultCursorEnable() 
+2. Documented key string representations in Input header file
+3. Added Streaming Sound (BIE_GF1_Sound.h)
+         Sound::Sound (Modified)
+         Sound::IsStreaming();
+4. Added Sound Pausing
+         Sound::IsPaused();
+         Sound::Pause();
+4. Added Sequenced Music (BIE_GF1_Music.h)
+         class Music
+
+Greg Quincey
+1. Added StringToKey method to Input module.
+      StringToKey();
+2. Added Wireframe Graphics Module (BIE_GF1_Graphics.h)
+      GetMaxPrimitives();
+      DrawLine();
+      DrawVector();
+      DrawCircle();
+      DrawFilledCircle();
+      DrawRectangle();
+      DrawFilledRectangle();
+3. Added Pixel Manipulation to Sprite Interface
+      Sprite::Lock();
+      Sprite::Unlock();
+      Sprite::UpdateRegion();
+      Sprite::SetPixelRGBA();
+      Sprite::SetPixelColour();
+      Sprite::GetPixelRGBA();
+      Sprite::GetPixelColour();
+      Sprite::ClearPixelsRGBA();
+      Sprite::ClearPixelsColour();
+
+Bugs Fixed
+----------
+Dale Freya
+1. MOUSE_EVENT_BUTTON_DOUBLE_CLICK now works
+2. Removed spaces in key names which would have complicated parsing of key binding files and console
+
+Bugs Identified but not Fixed
+-----------------------------
+Dale Freya
+1. MOUSE_EVENT_HOVER does not work.
+
+
+===========
+Version 1.5
+===========
+Enhancement and bug fix release.
+25/11/2003
+
+Enhancements
+------------
+Dale Freya
+1. Library now detects if GF1 Headers and GF1 DLLs are of differing versions and logs and aborts if they are.  Application class now takes version as a parameter however it has a
+default parameter supplied so clients don't have to change their code to get this benefit.  BIE_GF1_API_VERSION definition added to the definitions file.
+
+Bugs Fixed
+----------
+1. Sounds sampled at frequencies other than 44000 Hz initially play at 44000 Hz found by Adam Wood.  Fixed by Dale Freya
+2. Some odd sprite frame heights cause artifacts due to scaling.  E.g. 15 frame height on a 16 heigh sprite. found by Adrian Stickles.  Fixed by Greg Quincey and Dale Freya.
+
+
+===========
+Version 1.4
+===========
+Enhancement release.
+18/11/2003
+
+Enhancements
+------------
+Dale Freya
+1. Sound class added using FMOD by Dale Freya
+2. Separated sprite blending mode BLEND_MODE_ADDITIVE into BLEND_MODE_ADDITIVE (uses src alpha) and BLEND_MODE_ADDITIVE_COLOUR (uses src colour)
+
+Greg Quincey
+1. New floating point Colour class
+2. Lerp, SCurve & Remap templated math functions added
+3. Each sprite vertex can now be assigned a colour using the new Colour class including alpha information
+4. Sprite scaling added
+5. Sprite auto alpha masking added
+6. Vector3 external Normalise and additional operators.
+7. Mutiple image type file loading added using Devil
+8. Non-power of 2 texture loading
+9. Multi-line frame based sprites
+
+New Dependencies
+----------------
+DLLs Required to be in the bin directory:
+1. fmod.dll    (FMOD Sound Library)
+2. devil.dll   (Devil Image Library)
+3. ilu.dll     (Devil Image Library)
+
+
+===========
+Version 1.3
+===========
+Bug fix and enhancement release.
+28/10/2003
+
+Enhancements
+------------
+1. Sprite header commenting revised and improved.  Incorporated suggestion by Greg Quincey about placement of comments.
+
+Bugs Fixed
+----------
+1. Sprites without an alpha channel now do Additive blending correctly
+2. Copy constructor and assignment operator added to Sprite class.  Sprites can now be copied and assigned without causing errors later.  Thanks to Francois Coulombe for finding this bug.
+3. Explicit texture copy constructor and assignment operator has been added and made private so textures cannot be copied or assigned.  Instead, use the texture manager to create a new instance of the same texture.
+4. Mouse Move event no longer sends a message with invalid coordinates when the mouse is over the application window when the window is created.  Thanks to Gerald Poon for finding this bug.
+
+
+===========
+Version 1.2
+===========
+Bug fix and enhancement release.
+20/10/2003
+
+Enhancements
+------------
+1. GetVersion function added to BIE_GF1.h
+2. GetTextureName added to Sprite
+3. Alpha channel is now used for blending not just alpha testing.
+   Sprites have 3 blending modes, none, transparent and additive
+
+Bugs Fixed
+----------
+1. In the mouse event handler the world y axis was inverted.  I think it was Michael Coe who helped to find this bug.
+2. There was uninitialised data in the display mode structure, causing release mode to fail to go to fullscreen sometimes.  Thanks to Aaron Benton for finding this bug.
+3. Sprite texture coordinates were smaller than the full sprite size causing the sprite to be clipped.  This was hiding another bug which was that the texture mode for sprites should be set to clamped rather than wrapped (the default).  Thanks to Adam Wood for finding this bug.
+
+
+===========
+Version 1.1
+===========
+14/10/2003
+Bug fix release.
+
+Bugs Fixed
+----------
+1. In BIE_GF1_Math.h constant RADS_PER_DEG was recusively defined as 1/self.  This also affected the DegToRad function.  Thanks to Aaron Wood for finding this bug.
+
+
+===========
+Version 1.0
+===========
+21/09/2003
+Initial Release
+
