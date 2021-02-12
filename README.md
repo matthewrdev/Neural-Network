@@ -3,6 +3,8 @@ Neural-Network
 
 This repository demonstrates a rudimentary implementation of a neural network and a genetic algorithm.
 
+YouTube Demo: https://www.youtube.com/watch?v=0Str0Rdkxxo&list=PLEpwzRUUrDwhkSlQW2Yrlf4YTMYeN64t8
+
 Key files:
  - Genetic Algorithm
   - [GeneticAlgorithm.h](https://github.com/matthewrdev/Neural-Network/blob/master/Neural%20Network%20Source%20Code/Game/include/GeneticAlgorithm.h)
