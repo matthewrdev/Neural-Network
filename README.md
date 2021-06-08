@@ -3,7 +3,7 @@ Neural-Network
 
 🚨🚨**No longer actively maintained**🚨🚨
 
-This repository demonstrates a rudimentary implementation of a neural network and a genetic algorithm. I built this as part of an Artificial Intelligence course while studying video game software engineering at Qantm College (now SAE) back in 2008-2010. 
+This repository demonstrates a rudimentary implementation of a neural network and a genetic algorithm. I built this as part of an Artificial Intelligence course while studying video game software engineering at [Qantm College/SAE Institute](https://sae.edu.au) back in 2008-2010. 
 
 YouTube Demo: https://www.youtube.com/watch?v=0Str0Rdkxxo&list=PLEpwzRUUrDwhkSlQW2Yrlf4YTMYeN64t8
 
